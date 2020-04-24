@@ -32,7 +32,7 @@ MYSQL_SERVER = os.getenv('MYSQL_SERVER', 'localhost')
 MYSQL_USER = os.getenv('MYSQL_USER', 'user')
 MYSQL_PASS = os.getenv('MYSQL_PASS', 'pass')
 MYSQL_DATABASE = os.getenv('MYSQL_DATABASE', 'database')
-MYSQL_TABLE = os.getenv('MYSQL_TABLE', 'internet-speed')
+MYSQL_TABLE = os.getenv('MYSQL_TABLE', 'internetspeed')
 
 TEST_SERVER_ID = os.getenv('TEST_SERVER_ID', '1')
 
@@ -80,7 +80,7 @@ db_cursor.execute(
     "(`down` FLOAT, " +
     "`up` FLOAT, " +
     "`ping` FLOAT, " +
-    "`timestamp` TIMESTAMP DEFAULT CURRENT_TIMESTAMP, " +
+    "`timestamp` DATETIME DEFAULT CURRENT_TIMESTAMP, " +
     "`index` INT(0) AUTO_INCREMENT, " +
     "PRIMARY KEY (`index`))"
 )
